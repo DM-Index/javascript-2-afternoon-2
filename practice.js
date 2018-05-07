@@ -6,11 +6,6 @@
   You can refresh the page at any time to re-run all the tests.
 */
 
-let toTen = [];
-for (let i = 1; i < 11; i++) {
-  toTen.push(i);
-}
-
 ////////// PROBLEM 1 //////////
 
 // Do not edit the code below.
@@ -85,14 +80,26 @@ var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
   Write a function named evenFinder that is given nums as it's only argument.
   Return an array that contains the even numbers from the nums array.
 */
-var evenNums = [];
+
 function evenFinder(nums) {
+  var evenNums = [];
   for (var i = 0; i < nums.length; i++) {
     if (nums[i] % 2 === 0) {
       evenNums.push(nums[i]);
     }
   }
   return evenNums;
+}
+
+function evenFinder(arr) {
+  let evens = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evens.push(arr[i]);
+      console.log(arr[i]);
+    }
+  }
+  return evens;
 }
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
@@ -109,10 +116,48 @@ var numbersArray = [1, 2, 34, 54, 55, 34, 32, 11, 19, 17, 54, 66, 13];
 */
 
 function divider(numbersArray) {
-  oddNums = [];
-  evenNums = [];
-  return (comboArray = [[], []]);
+  let dividedArr = [[], []];
+  let evenNums = dividedArr[0];
+  let oddNums = dividedArr[1];
+
+  for (let i = 0; i < numbersArray.length; i++) {
+    if (numbersArray[i] % 2 === 0) {
+      evenNums.push(numbersArray[i]);
+    } else {
+      oddNums.push(numbersArray[i]);
+    }
+  }
+  return dividedArr;
 }
+
+// function divider(numbersArray){
+//   let evensArray = [];
+//   let oddsArray = [];
+//   for (var i = 0; i < numbersArray.length; i++){
+//     if (numbersArray[i] % 2 === 0){
+//       evensArray.push(numbersArray[i]);
+//     } else {
+//       oddsArray.push(numbersArray[i]);
+//     }
+
+//   }
+// return [evensArray, oddsArray];
+// };
+
+// const divider = numbersArray => {
+//   let dividedArray = [[], []];
+//   let evens = dividedArray[0];
+//   let odds = dividedArray[1];
+
+//   for (let num of numbersArray) {
+//     if (num % 2 === 0) {
+//       evens.push(num);
+//     } else {
+//       odds.push(num);
+//     }
+//   }
+//   return dividedArray;
+// };
 
 ////////// PROBLEM 7 //////////
 
